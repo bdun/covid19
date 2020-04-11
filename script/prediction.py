@@ -163,7 +163,7 @@ def plotGR(country1, gr, doublings):
     plt.legend(handles=[res1, res2])
     plt.show()
 
-    def predictCases(country1, country2, d_shift, p=False):
+def predictCases(country1, country2, d_shift, p=False):
     ma = np.where(cases["Country/Region"] == country1)[0]
     c_count_1 = cases.iloc[ma, 4:].sum(axis=0)
     d_count_1 = deaths.iloc[ma, 4:].sum(axis=0)
